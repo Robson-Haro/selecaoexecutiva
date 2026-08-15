@@ -5,6 +5,7 @@ Roadmap interativo para acompanhamento de processos seletivos executivos.
 ## Recursos
 
 - Etapa atual com sinalização luminosa verde.
+- Fluxo completo com as 13 etapas do processo seletivo executivo.
 - Cadastro de candidatos e links do LinkedIn por etapa.
 - Avanço de candidatos e registro visual de reprovação.
 - Datas adicionais para entrevistas.
