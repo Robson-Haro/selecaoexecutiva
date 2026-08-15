@@ -14,9 +14,9 @@ const initialState={jobTitle:'Gerente Executivo',owner:'Talent Acquisition',curr
  {id:'proposal',title:'Proposta',date:'',summary:'',notes:'',dateSlots:false,interviews:[],candidates:[]},
  {id:'admission',title:'Processo Admissional',date:'',summary:'',notes:'',dateSlots:false,interviews:[],candidates:[]}
 ]};
+const clone=o=>JSON.parse(JSON.stringify(o));
 let state=loadState();
 const rail=document.querySelector('#stageRail'),workspace=document.querySelector('#stageWorkspace');
-const clone=o=>JSON.parse(JSON.stringify(o));
 function loadState(){try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));return saved?.stages?.length===13?saved:clone(initialState)}catch{return clone(initialState)}}
 function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}
 function escapeHtml(v=''){return v.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
