@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071a2b">
+  <title>Seleção Executiva | Minerva Foods</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="app-shell">
+    <header class="topbar glass">
+      <div>
+        <span class="eyebrow">Talent Acquisition · Seleção Executiva</span>
+        <h1>Roadmap do Processo Seletivo</h1>
+        <p>Acompanhamento executivo, visual e dinâmico da jornada de seleção.</p>
+      </div>
+      <img src="logo-minerva.webp" alt="Minerva Foods" class="brand-logo">
+    </header>
+
+    <section class="summary glass" aria-label="Resumo do processo">
+      <label><span>Nome da posição</span><input id="jobTitle" value="Gerente Executivo" aria-label="Nome da posição"></label>
+      <label><span>Responsável</span><input id="owner" value="Talent Acquisition" aria-label="Responsável pelo processo"></label>
+      <div class="metric"><span>Início da triagem</span><strong>10/08/2026</strong></div>
+      <div class="metric"><span>Abertura e alinhamento</span><strong>14/08/2026</strong></div>
+      <div class="metric accent"><span>Candidatos na triagem</span><strong>30</strong></div>
+    </section>
+
+    <section class="roadmap glass">
+      <div class="section-heading">
+        <div><span class="eyebrow">Fluxo interativo</span><h2>Etapas da seleção</h2></div>
+        <p>Clique em uma etapa para torná-la atual e abrir sua gestão.</p>
+      </div>
+      <div id="stageRail" class="stage-rail" role="tablist" aria-label="Etapas do processo"></div>
+    </section>
+
+    <section id="stageWorkspace" class="workspace glass" aria-live="polite"></section>
+  </main>
+
+  <template id="candidateTemplate">
+    <article class="candidate-card">
+      <div class="candidate-fields">
+        <input class="candidate-name" placeholder="Nome do candidato" aria-label="Nome do candidato">
+        <input class="candidate-link" placeholder="Link do LinkedIn" type="url" aria-label="Link do LinkedIn">
+      </div>
+      <div class="candidate-actions">
+        <a class="linkedin-open" target="_blank" rel="noopener" title="Abrir LinkedIn" aria-label="Abrir LinkedIn">in</a>
+        <button class="advance" title="Avançar para a próxima etapa" aria-label="Avançar candidato">➜</button>
+        <button class="reject" title="Reprovar candidato" aria-label="Reprovar candidato">×</button>
+      </div>
+    </article>
+  </template>
+  <script src="app.js"></script>
+</body>
+</html>
