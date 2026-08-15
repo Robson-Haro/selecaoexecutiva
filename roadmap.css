@@ -1,12 +1,12 @@
 .roadmap{overflow-x:auto}
 .section-heading{position:sticky;left:0;z-index:5}
 .stage-rail{display:grid;grid-template-columns:repeat(13,minmax(96px,1fr));gap:0;min-width:1280px;margin-top:30px}
-.stage-button{display:grid;grid-template-rows:88px 60px;text-align:left}
-.stage-copy{padding:0 8px;border-left:2px solid rgba(229,227,184,.36)}
-.stage-button:nth-child(even) .stage-copy{grid-row:2;padding-top:12px}
-.stage-button:nth-child(even) .lamp-wrap{grid-row:1}
+.stage-button{display:grid;grid-template-rows:92px 64px 92px;text-align:left}
+.stage-copy{grid-row:1;padding:0 8px;border-left:2px solid rgba(229,227,184,.36);align-self:end;margin-bottom:12px}
+.stage-button:nth-child(even) .stage-copy{grid-row:3;align-self:start;margin:12px 0 0;padding-top:0}
+.stage-button .lamp-wrap,.stage-button:nth-child(even) .lamp-wrap{grid-row:2}
 .stage-button:focus-visible{outline:2px solid var(--sand);outline-offset:2px}
-.lamp-wrap{height:60px}
+.lamp-wrap{height:64px}
 .stage-button:not(:last-child) .lamp-wrap:after{left:50%;right:-50%;height:14px;background:linear-gradient(180deg,var(--sand),#ebefd8 32%,#577C97 57%,#BF404D 82%);box-shadow:0 0 10px rgba(229,227,184,.75),0 8px 16px rgba(191,64,77,.22)}
 .lamp{width:43px;height:43px;border:3px solid var(--sand)}
 .lamp-number{position:absolute;z-index:3;font-size:.67rem;font-weight:900;pointer-events:none}
