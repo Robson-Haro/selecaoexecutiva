@@ -16,3 +16,29 @@
 @media(max-width:1050px){.stage-rail{grid-template-columns:repeat(13,minmax(96px,1fr))}.stage-button:not(:last-child) .lamp-wrap:after{display:block}}
 @media(max-width:760px){.stage-rail{grid-template-columns:repeat(13,minmax(96px,1fr));gap:0}}
 @media(max-width:470px){.stage-rail{grid-template-columns:repeat(13,minmax(96px,1fr))}}
+
+/* Painel de gestão compacto e próximo ao roadmap */
+.workspace{width:min(1120px,100%);margin:8px auto 0;padding:14px 16px}
+.workspace-header{padding-bottom:9px}
+.workspace-header h2{font-size:1.15rem}
+.status-pill{padding:6px 10px}
+.workspace-grid{grid-template-columns:minmax(230px,.72fr) minmax(420px,1.45fr);gap:12px;margin-top:11px}
+.editor-card,.candidates-panel{padding:11px 12px;border-radius:14px}
+.field{margin-bottom:9px}
+.field span,.panel-label{margin-bottom:6px}
+.field input,.field textarea,.candidate-fields input{padding:9px 10px;border-radius:9px}
+.field textarea{min-height:72px;height:72px}
+.interview-row{margin-bottom:6px}
+.icon-button{width:36px}
+.add-button{padding:8px}
+.candidate-list{gap:7px;margin:8px 0}
+.candidate-card{gap:8px;padding:7px;border-radius:11px}
+.candidate-actions a,.candidate-actions button{width:34px;height:34px;border-radius:9px}
+.empty-state{padding:17px 10px}
+.save-note{margin:7px 0 0}
+
+@media(max-width:760px){
+  .workspace{width:100%;padding:13px}
+  .workspace-grid{grid-template-columns:1fr}
+  .field textarea{min-height:78px;height:78px}
+}
