@@ -44,9 +44,12 @@
   .workspace-grid{grid-template-columns:1fr}
   .field textarea{min-height:78px;height:78px}
 }
-.workspace{position:relative}
-.candidate-guide{position:absolute;left:-150px;top:58px;width:132px;border:0;background:transparent;color:#baffd8;font:800 .7rem/1.28 Inter;text-align:center;cursor:pointer;filter:drop-shadow(0 0 10px rgba(69,255,154,.34))}
-.guide-arrow{display:grid;place-items:center;width:52px;height:58px;margin:0 auto 7px;border-radius:28px 28px 34px 34px;background:linear-gradient(180deg,#74ffb3,#15c96b);color:#052618;font-size:2.2rem;box-shadow:0 0 10px #fff,0 0 22px rgba(69,255,154,.95),0 0 46px rgba(69,255,154,.5);animation:guideBounce 1.55s ease-in-out infinite}
-.candidate-guide:hover .guide-arrow{transform:translateY(4px) scale(1.06)}
-@keyframes guideBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
-@media(max-width:1320px){.candidate-guide{position:static;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;margin:0 0 10px}.guide-arrow{flex:0 0 38px;width:38px;height:42px;margin:0;font-size:1.55rem}}
+
+/* Chamada visível logo abaixo do fluxo de etapas */
+.candidate-guide{display:flex;align-items:center;gap:12px;width:max-content;max-width:100%;margin:10px 0 18px 18px;padding:7px 15px 7px 7px;border:1px solid rgba(255,224,92,.72);border-radius:999px;background:rgba(255,207,51,.1);color:#fff0a3;font:800 .72rem/1.25 Inter;text-align:left;cursor:pointer;box-shadow:0 0 16px rgba(255,207,51,.2);transition:.25s ease}
+.guide-arrow{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:linear-gradient(180deg,#fff58a,#f5c518);color:#3a2b00;font-size:1.75rem;box-shadow:0 0 8px #fff5b2,0 0 20px rgba(255,207,51,.92),0 0 38px rgba(255,207,51,.46);animation:guideBounce 1.55s ease-in-out infinite;transition:.25s ease}
+.candidate-guide:hover{background:rgba(255,207,51,.16);transform:translateY(2px)}
+.candidate-guide.activated{border-color:rgba(69,255,154,.82);background:rgba(69,255,154,.14);color:#baffd8;box-shadow:0 0 20px rgba(69,255,154,.35)}
+.candidate-guide.activated .guide-arrow{background:linear-gradient(180deg,#a2ffd0,#20df78);color:#052618;box-shadow:0 0 9px #fff,0 0 24px rgba(69,255,154,.98),0 0 45px rgba(69,255,154,.56)}
+@keyframes guideBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media(max-width:760px){.candidate-guide{width:100%;margin:10px 0 16px;justify-content:center}.guide-arrow{flex-basis:38px;width:38px;height:38px;font-size:1.5rem}}
