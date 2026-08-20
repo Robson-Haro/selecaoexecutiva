@@ -51,11 +51,32 @@
       </div>
       <div class="candidate-actions">
         <a class="linkedin-open" target="_blank" rel="noopener" title="Abrir LinkedIn" aria-label="Abrir LinkedIn">in</a>
+        <button class="comments-button" title="Abrir comentários" aria-label="Abrir comentários do candidato">Comentários</button>
         <button class="advance" title="Avançar para a próxima etapa" aria-label="Avançar candidato">➜</button>
         <button class="reject" title="Reprovar candidato" aria-label="Reprovar candidato">×</button>
       </div>
     </article>
   </template>
+  <dialog id="commentsDialog" class="comments-dialog" aria-labelledby="commentsTitle">
+    <form method="dialog" class="comments-modal">
+      <div class="comments-header">
+        <div>
+          <span class="eyebrow">Registro do candidato</span>
+          <h2 id="commentsTitle">Comentários</h2>
+          <p id="commentsCandidateName">Candidato</p>
+        </div>
+        <button id="closeComments" class="comments-close" value="cancel" aria-label="Fechar comentários">×</button>
+      </div>
+      <label class="field">
+        <span>Comentários</span>
+        <textarea id="candidateComments" placeholder="Registre aqui suas observações, decisões e próximos passos..."></textarea>
+      </label>
+      <div class="comments-footer">
+        <span id="commentsStatus">Os comentários ficam disponíveis para todos.</span>
+        <button id="saveComments" class="comments-save" value="default">Salvar comentários</button>
+      </div>
+    </form>
+  </dialog>
   <script src="app.js"></script>
 </body>
 </html>

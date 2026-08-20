@@ -21,7 +21,7 @@ export default async function handler(request,response){
 
   if(request.method==='POST'){
     const body=typeof request.body==='string'?JSON.parse(request.body):request.body;
-    if(!body?.state||!Array.isArray(body.state.stages)||body.state.stages.length!==13){
+    if(!body?.state||!Array.isArray(body.state.stages)||body.state.stages.length!==12){
       return response.status(400).json({error:'Estrutura de dados inválida.'});
     }
     const payload={state:body.state,updatedAt:Date.now()};
