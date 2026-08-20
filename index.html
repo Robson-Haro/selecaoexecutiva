@@ -33,16 +33,21 @@
 
     <section class="roadmap glass">
       <div class="section-heading">
-        <div><span class="eyebrow">Fluxo interativo</span><h2>Etapas da seleção</h2></div>
+        <div>
+          <span class="eyebrow">Fluxo interativo</span>
+          <div class="section-title-row">
+            <h2>Etapas da seleção</h2>
+            <button id="candidateGuide" class="candidate-guide" type="button" aria-label="Ir para os candidatos desta etapa">
+              <span class="guide-arrow">↓</span>
+              <span>Clique aqui para ver candidatos desta etapa</span>
+            </button>
+          </div>
+        </div>
         <p>Clique em uma etapa para torná-la atual e abrir sua gestão.</p>
       </div>
       <div class="roadmap-scroll">
         <div id="stageRail" class="stage-rail" role="tablist" aria-label="Etapas do processo"></div>
       </div>
-      <button id="candidateGuide" class="candidate-guide" type="button" aria-label="Ir para os candidatos desta etapa">
-        <span class="guide-arrow">↓</span>
-        <span>Clique aqui para ver candidatos desta etapa</span>
-      </button>
       <section id="stageWorkspace" class="workspace" aria-live="polite"></section>
     </section>
   </main>
