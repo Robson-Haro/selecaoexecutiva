@@ -13,3 +13,6 @@
 .comments-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;color:var(--muted);font-size:.72rem}
 .comments-save{border:1px solid rgba(69,255,154,.52);border-radius:11px;padding:11px 16px;background:rgba(69,255,154,.17);color:#baffd8;font-weight:800;cursor:pointer}
 @media(max-width:760px){.candidate-actions .comments-button{margin-right:auto}.comments-footer{align-items:stretch;flex-direction:column}.comments-save{width:100%}}
+
+
+.internal-search-notice{margin:18px 0 0;display:flex;align-items:center;gap:16px;padding:16px 20px;border:1px solid rgba(255,222,87,.86);border-radius:18px;background:linear-gradient(110deg,rgba(255,214,37,.23),rgba(255,244,168,.1));box-shadow:0 0 10px rgba(255,222,87,.75),0 0 28px rgba(255,206,33,.4),inset 0 0 18px rgba(255,243,164,.18);color:#fff9c7}.notice-hash{display:grid;place-items:center;width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:#ffe04d;color:#172434;font-size:1.85rem;font-weight:900;line-height:1;box-shadow:0 0 14px #fff3a3,0 0 26px rgba(255,222,87,.92);text-shadow:none}.internal-search-notice p{margin:0;font-size:.92rem;font-weight:800;line-height:1.45;letter-spacing:.01em;text-shadow:0 0 9px rgba(255,230,92,.75)}@media(max-width:600px){.internal-search-notice{align-items:flex-start;padding:14px}.internal-search-notice p{font-size:.82rem}}
