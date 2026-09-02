@@ -31,12 +31,18 @@
       <div class="metric accent"><span>Candidatos na triagem</span><strong>30</strong></div>
     </section>
 
-    <aside class="internal-search-notice" role="status">
-      <span class="notice-hash" aria-hidden="true">#</span>
-      <p>Foi feito buscas internas com o Sistema Kairós e não foi encontrado candidatos internos compatíveis para essa posição.</p>
-    </aside>
+    <div class="app-tabs" role="tablist" aria-label="Áreas do processo seletivo">
+      <button class="app-tab active" id="roadmapTab" role="tab" aria-selected="true" aria-controls="roadmapView">Processo seletivo</button>
+      <button class="app-tab" id="kairosTab" role="tab" aria-selected="false" aria-controls="kairosView">Avaliação Interna Kairós</button>
+    </div>
 
-    <section class="roadmap glass">
+    <div id="roadmapView">
+      <aside class="internal-search-notice" role="status">
+        <span class="notice-hash" aria-hidden="true">#</span>
+        <p>Foi feito buscas internas com o Sistema Kairós e não foi encontrado candidatos internos compatíveis para essa posição.</p>
+      </aside>
+
+      <section class="roadmap glass">
       <div class="section-heading">
         <div>
           <span class="eyebrow">Fluxo interativo</span>
@@ -54,6 +60,49 @@
         <div id="stageRail" class="stage-rail" role="tablist" aria-label="Etapas do processo"></div>
       </div>
       <section id="stageWorkspace" class="workspace" aria-live="polite"></section>
+      </section>
+    </div>
+
+    <section id="kairosView" class="kairos-view" hidden aria-labelledby="kairosTitle">
+      <article class="kairos-overview glass">
+        <div>
+          <span class="eyebrow">Avaliação interna · Sistema Kairós</span>
+          <h2 id="kairosTitle">Gerente Executivo de Remuneração</h2>
+          <p>BI Recursos Humanos · São Paulo - São Paulo</p>
+        </div>
+        <div class="indicated-count"><strong>1</strong><span>INDICADO</span></div>
+      </article>
+
+      <article class="kairos-candidate glass">
+        <header class="kairos-candidate-header">
+          <div class="candidate-monogram" aria-hidden="true">FA</div>
+          <div>
+            <span class="eyebrow">Candidato indicado</span>
+            <h3>Fabio Adriano Pereira</h3>
+            <p>Cargo atual: <strong>Gerente Executivo Recursos Humanos</strong></p>
+          </div>
+          <div class="kairos-score"><strong>63%</strong><span>SCORE KAIRÓS</span></div>
+        </header>
+        <div class="kairos-metrics" aria-label="Métricas da avaliação">
+          <div><span>Requisitos</span><strong>67%</strong></div>
+          <div><span>Descrição de cargo</span><strong>67%</strong></div>
+          <div><span>Experiência</span><strong>100%</strong></div>
+          <div><span>Aspiração</span><strong>0%</strong></div>
+          <div><span>Nota</span><strong>3,0/5</strong></div>
+          <div><span>Potencial</span><strong>2,8/5</strong></div>
+        </div>
+        <div class="kairos-analysis">
+          <p><strong>Análise:</strong> Sem descrição de cargo vinculada; foram utilizados os dados da própria vaga.</p>
+          <p><strong>Termos fortes:</strong> gerente, executivo, execut, remuneração, remuner e recursos.</p>
+          <p><strong>Movimento:</strong> lateral no mesmo nível — Gerente Executivo.</p>
+          <p><strong>Evidências obrigatórias de Remuneração e Benefícios:</strong> remuneração, cargos ou estrutura salarial, headcount ou quadro de pessoal, remuneração variável.</p>
+        </div>
+      </article>
+
+      <aside class="kairos-complete" role="status">
+        <span aria-hidden="true">✓</span>
+        <div><strong>Busca concluída</strong><p>Não foram encontrados outros candidatos aptos para a posição.</p></div>
+      </aside>
     </section>
   </main>
 
