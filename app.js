@@ -33,6 +33,17 @@ function normalizeState(value){
 let state=loadState(),saveTimer=null,lastServerVersion=0,isHydrating=true;
 const rail=document.querySelector('#stageRail'),workspace=document.querySelector('#stageWorkspace'),commentsDialog=document.querySelector('#commentsDialog'),commentsTextarea=document.querySelector('#candidateComments'),commentsName=document.querySelector('#commentsCandidateName');
 let commentsCandidateIndex=null;
+function setAppView(view){
+ const isKairos=view==='kairos';
+ document.querySelector('#roadmapView').hidden=isKairos;
+ document.querySelector('#kairosView').hidden=!isKairos;
+ document.querySelector('#roadmapTab').classList.toggle('active',!isKairos);
+ document.querySelector('#kairosTab').classList.toggle('active',isKairos);
+ document.querySelector('#roadmapTab').setAttribute('aria-selected',String(!isKairos));
+ document.querySelector('#kairosTab').setAttribute('aria-selected',String(isKairos));
+}
+document.querySelector('#roadmapTab').onclick=()=>setAppView('roadmap');
+document.querySelector('#kairosTab').onclick=()=>setAppView('kairos');
 function loadState(){try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));return saved?.stages?normalizeState(saved):clone(initialState)}catch{return clone(initialState)}}
 function candidateCount(value){return value.stages.reduce((total,stage)=>total+stage.candidates.length,0)}
 function setSyncStatus(message){const note=document.querySelector('.save-note');if(note)note.textContent=message}
